@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loop</title>
+
+    <style>
+        body {
+            background-color: #194ec5bf;
+            color: white;
+            text-align: center;
+            padding-top: 3%;
+            font-family: sans-serif;
+        }
+
+        div {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: auto;
+            display: inline-block;
+            padding: 13px;
+            margin: 0px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 22px 0px black;
+            font-size: 23px;
+        }
+
+        h2 {
+
+            background-color: white;
+            padding: 5px;
+            color: black;
+
+            border-radius: 33px;
+            width: auto;
+
+        }
+
+        h3 {
+            background-color: black;
+            padding: 5px;
+
+            border-radius: 33px;
+
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>KEY LOOP CONCEPTS </h2>
+    <br>
+    <h3> USING FOR LOOPS</h3>
+    <div id="answer3"></div>
+
+
+
+    <h3>USING WHILE LOOPS</h3>
+    <div id="answer2"></div>
+
+
+
+    <h3>USING DO WHILE LOOPS</h3>
+    <div id="answer"></div>
+
+    <!--    USING FOR LOOPS -->
+
+    <script type="text/javascript">
+        var scores = [24, 32, 17]; //Array of scores
+        var arraylength = scores.length; // Items in array
+        var roundNumber = 0; //Current round
+        var msg = ''; //Message
+        var i; // Counter 
+
+        //Loop through the items in the array
+        for (i = 0; i < arraylength; i++) {
+            //Arrays are zero based (so 0 is round 1)
+            //Add 1 to the current round
+            roundNumber = (i + 1);
+            // Write the current round to message
+            msg += 'Round ' + roundNumber + ' : ';
+            //Get the score from the scores array
+            msg += scores[i] + '<br>';
+        }
+        document.getElementById('answer3').innerHTML = msg;
+    </script>
+
+
+    <!--    USING WHILE LOOPS-->
+
+    <script>
+        var i = 1; // Set counter to 1
+        var msg = ""; //Message
+
+        //Store 5 times table in a variable
+
+        do {
+            msg += i + ' x 5 = ' + (i * 5) + '<br>';
+            i++;
+        }
+        while (i < 11);
+
+        //Note how this is already 1 and it still runs
+
+        document.getElementById('answer2').innerHTML = msg;
+    </script>
+
+    <!--    USING DO WHILE LOOPS -->
+
+    <script>
+        var i = 1; // Set counter to 1
+        var msg = ""; //Message
+
+        //Store 5 times table in a variable
+
+        do {
+            msg += i + ' x 5 = ' + (i * 5) + '<br>';
+            i++;
+        }
+        while (i < 1);
+
+        //Note how this is already 1 and it still runs
+
+        document.getElementById('answer').innerHTML = msg;
+    </script>
+
+
+
+
+
+</body></html>
